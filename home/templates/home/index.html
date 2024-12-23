@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Başvuru Sayfası</title>
+
+    <style>
+      body{
+
+        margin: 100px;
+      }
+        
+
+
+
+    </style>
+
+
+</head>
+<body>
+<form action="{% url 'basvuru' %}" method="post">
+    {%csrf_token%}
+
+
+ <div class="form-group">
+    <label>İsim gir</label>
+     {{form.name}}
+  </div>
+
+
+  <div class="form-group">
+    <label>">Email address gir</label>
+    {{form.email}}
+  </div>
+
+      <div class="form-group">
+    <label>Mesajını yaz</label>
+   {{form.message}}
+  </div>
+
+             <div class="form-group">
+    <label>Soyisimsim gir</label>
+     {{form.surname}}
+  </div>
+
+             <div class="form-group">
+    <label>Anne adını gir</label>
+     {{form.momname}}
+  </div>
+
+<div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <!--<input type="submit" value="Basvur">-->
+</form>
+</body>
+</html>
